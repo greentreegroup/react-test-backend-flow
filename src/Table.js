@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Table = ({ userData, isAuthenticated, handleDelete }) => {
   return (
@@ -19,7 +19,10 @@ const Table = ({ userData, isAuthenticated, handleDelete }) => {
             <td>{user.Phonenumber}</td>
             {isAuthenticated && (
               <td>
-                <button className="btn btn-secondary btn-sm" onClick={() => handleDelete(user.ID)}>
+                <button
+                  className="btn btn-secondary btn-sm"
+                  onClick={() => handleDelete(user.ID)}
+                >
                   Delete
                 </button>
               </td>

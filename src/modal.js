@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 const ConfirmDeleteModal = ({ showModal, confirmDelete, cancelDelete }) => {
   if (!showModal) return null; // Don't render anything if showModal is false
@@ -15,10 +14,18 @@ const ConfirmDeleteModal = ({ showModal, confirmDelete, cancelDelete }) => {
             <p>Are you sure you want to delete this user?</p>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" onClick={cancelDelete}>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={cancelDelete}
+            >
               No
             </button>
-            <button type="button" className="btn btn-danger" onClick={confirmDelete}>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={confirmDelete}
+            >
               Yes
             </button>
           </div>

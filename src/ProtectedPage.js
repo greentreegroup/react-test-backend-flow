@@ -32,13 +32,11 @@ const ProtectedPage = () => {
   const fetchData = async () => {
     try {
       setFetchLoading(true);
-      const token = await getAccessTokenSilently();
 
       const response = await fetch(BACKEND_SHOW_DATA_URL, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          token,
         },
       });
 
@@ -46,7 +44,6 @@ const ProtectedPage = () => {
       const results = data.d.results;
       setUserData(results);
       console.log(data);
-      console.log(token);
     } catch (error) {
       console.error("Failed to fetch data:", error);
     } finally {
